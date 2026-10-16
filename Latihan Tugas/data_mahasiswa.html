@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    
+    <!-- Bagian CSS Internal -->
+    <style>
+        /* Mengatur jenis huruf dan warna latar belakang (Syarat CSS: font-family, color) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f8ff;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Mengatur warna dan perataan teks untuk judul */
+        h2 {
+            color: #1a56b0;
+            text-align: center;
+        }
+
+        /* Mengatur kotak pembungkus form agar rapi (Syarat CSS: padding, border) */
+        .form-container {
+            background-color: #ffffff;
+            border: 1px solid #ccd;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            border-radius: 5px;
+        }
+
+        /* Mengatur tata letak elemen input */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        /* Syarat CSS: Class (Tombol khusus) */
+        .tombol-kirim {
+            background-color: #1a56b0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* Mengatur tabel (Syarat CSS: border-collapse, width) */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #ffffff;
+        }
+
+        /* Mengatur sel tabel (Syarat CSS: padding, border) */
+        th, td {
+            border: 1px solid #ccd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        /* Mengatur header tabel */
+        th {
+            background-color: #1a56b0;
+            color: white;
+        }
+
+        /* Syarat CSS: Class (Untuk memberi warna beda pada baris tertentu) */
+        .baris-sorot {
+            background-color: #e6eefb;
+        }
+
+        /* Teks rata kanan khusus untuk sel gabungan */
+        .rata-kanan {
+            text-align: right;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Bagian Form Data Mahasiswa -->
+    <div class="form-container">
+        <h2>Form Pendaftaran Mahasiswa</h2>
+        
+        <form action="#" method="post">
+            <!-- Elemen Text -->
+            <div class="form-group">
+                <label>Nama Lengkap:</label><br>
+                <input type="text" name="nama" placeholder="Masukkan nama" required>
+            </div>
+
+            <!-- Elemen Email -->
+            <div class="form-group">
+                <label>Email:</label><br>
+                <input type="email" name="email" placeholder="contoh@gmail.com" required>
+            </div>
+
+            <!-- Elemen Radio -->
+            <div class="form-group">
+                <label>Jenis Kelamin:</label><br>
+                <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                <input type="radio" name="jk" value="Perempuan"> Perempuan
+            </div>
+
+            <!-- Elemen Checkbox -->
+            <div class="form-group">
+                <label>Hobi (bisa pilih lebih dari satu):</label><br>
+                <input type="checkbox" name="hobi" value="Membaca"> Membaca
+                <input type="checkbox" name="hobi" value="Olahraga"> Olahraga
+                <input type="checkbox" name="hobi" value="Menulis"> Menulis
+            </div>
+
+            <!-- Elemen Select -->
+            <div class="form-group">
+                <label>Program Studi:</label><br>
+                <select name="prodi">
+                    <option value="Informatika">Informatika</option>
+                    <option value="Sistem Informasi">Sistem Informasi</option>
+                    <option value="Teknik Komputer">Teknik Komputer</option>
+                </select>
+            </div>
+
+            <!-- Elemen Textarea -->
+            <div class="form-group">
+                <label>Alamat Rumah:</label><br>
+                <textarea name="alamat" rows="4" cols="40" placeholder="Masukkan alamat lengkap"></textarea>
+            </div>
+
+            <button type="submit" class="tombol-kirim">Simpan Data</button>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
+
+    <!-- 2. Bagian Tabel Data Mahasiswa -->
+    <h2>Daftar Mahasiswa Aktif</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>NIM</th>
+                <th>Nama</th>
+                <th>Program Studi</th>
+                <th>IPK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data Mahasiswa 1 -->
+            <tr>
+                <td>252520109</td>
+                <td>Mu'iz Habib Ashabih</td>
+                <td>Teknologi Informasi</td>
+                <td>3.77</td>
+            </tr>
+            <!-- Data Mahasiswa 2 (Memakai class .baris-sorot untuk belang-belang) -->
+            <tr class="baris-sorot">
+                <td>252520047</td>
+                <td>Airlangga Nareswara</td>
+                <td>Teknologi Informasi</td>
+                <td>3.77</td>
+            </tr>
+            <!-- Data Mahasiswa 3 -->
+            <tr>
+                <td>252520010</td>
+                <td>Rocky </td>
+                <td>Teknologi Informasi</td>
+                <td>3.77</td>
+            </tr>
+            <!-- Data Mahasiswa 4 -->
+            <tr class="baris-sorot">
+                <td>252520011</td>
+                <td>Bima</td>
+                <td>Teknologi Informasi</td>
+                <td>3.77</td>
+            </tr>
+            <!-- Data Mahasiswa 5 -->
+            <tr>
+                <td>2525250012</td>
+                <td>Dhea</td>
+                <td>Teknologi Informasi</td>
+                <td>3.77</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <!-- Menggunakan atribut colspan untuk menggabungkan 3 kolom (NIM, Nama, Prodi) -->
+            <tr class="baris-sorot">
+                <td colspan="3" class="rata-kanan">Rata-rata IPK:</td>
+                <td>3.77</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
